@@ -41,8 +41,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 
                     // Retrieve individual field value
-                    echo $row["user"] . $row["pass"];
-                    if ($password ==  $row["pass"]){
+                    echo $row["user"] . $row["password"];
+                    if ($password ==  $row["password"]){
                         session_start();
                         $_SESSION["user"]= "ok";
                         unset($pdo);
